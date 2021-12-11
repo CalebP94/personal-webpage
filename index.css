@@ -1,0 +1,298 @@
+:root {
+    --color-brand--1: #e48900;
+    --color-brand--2: #01c711;
+    --color-brand--3: #ffffff;
+  
+    --color-dark--: #26252e;
+    --color-dark--2: #a5a5a5;
+    --color-light--1: rgb(235, 226, 226);
+    --color-light--2: #e7e7e7;
+    --color-light--3: rgb(200, 200, 200);
+}
+
+
+
+body{
+    padding:3px;
+    display:flex;
+    background-color:#000000;
+    flex-direction: column;
+    width:100%;
+    font-family: "Lucida Sans Typewriter";
+    font-weight: 700;
+}
+
+/*------------------------------------------------------------*/
+/*Nav*/
+/*------------------------------------------------------------*/
+
+.div-header{
+    display: flex;
+    background-color: black;
+    color:white;
+    flex-direction: row;
+    justify-content: center;
+    padding:15px;
+    align-items: center;
+    height:35px;
+    margin-top:10px;
+}
+  .main-menu{
+    display:none;
+  }
+
+  .dropbtn{
+    padding-top: 2px;
+    font-size: 16px;
+    border:none;
+    border-radius: 5px;
+    align-self:center;
+  }
+
+  #btn-menu{
+    display:none;
+    background-color:rgb(170, 170, 170);
+    position:absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+
+  }
+#btn-menu>li>a:hover {
+  background-color: #ddd;
+  text-decoration: solid;
+}
+.drop-down:hover #btn-menu {display: block;}
+
+
+@media all and (min-width: 725px){
+    .div-header{
+        display: flex;
+        background-color: black;
+        color:white;
+        justify-content: space-between;
+        padding:30px;
+        align-items: center;
+        width:90%;
+        height:35px;
+        margin-right:100px;
+        margin-left:50px;
+        
+    }
+    
+    .div-header>nav.main-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .div-header>nav.main-menu>ul{
+        display: flex;
+        padding-left: 0;
+        list-style-type: none;
+    }
+    .div-header>nav.main-menu>ul>li>a{
+        color:white;
+        text-decoration: solid;
+        margin: 0 100px 0 25px;
+    }
+    .div-header>nav.main-menu>ul>li:last-child>a {
+        margin-right: 0;
+      }
+
+    .dropbtn{
+      display:none;
+    }
+  
+}
+/*---------------------------------------------------------------------------------------
+HEADER CONTAINS LOGO AND WELCOME
+*-------------------------------------------------------------------------------------------*/
+header{
+    position:relative;
+    width:100%;
+    border: 3px solid black;
+    display:flex;
+    align-content: space-between;
+    justify-content: center; 
+    flex-direction: column;
+    background-image: url('./Images/6BtzdZqDikFP-black-dark-texture-wall-brick-backgrounds-image.jpg');
+}
+
+section#logo{
+    margin:5px;
+    flex-shrink: 1;
+    align-self: center;
+    display:flex;
+    flex-direction: row;
+
+}
+
+div.welcome > div{
+    font-size:75px;
+}
+
+.image{
+    border: 1px solid grey;
+    width:800px;
+    display:flex;
+    align-items: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    
+}
+@media all and (max-width: 945px){
+    .welcome{
+        display:none;
+    }
+}
+
+/*---------------------------------------------------------------------------------------
+Main
+*------------------------------------------------------------------------------------------*/
+main{
+    display: flex;
+    color:black;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    font-size: 20px;
+}
+hr {
+    border: 3px solid rgb(92, 92, 92);
+    border-radius: 5px;
+    width:90%;
+    margin-top: 150px;
+  }
+#personal-photo{
+    align-self: center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(84, 87, 100, 0.05) 100%);
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+.info{
+    align-self: center;
+    margin-right:25px;
+    width: 300px;
+}
+
+section#personal-photo>div>img{
+    box-shadow:20px 20px 50px 5px rgb(189, 189, 189);
+}
+
+#info-container{
+    background-color:black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    width:100%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(84, 87, 100, 0.05) 100%); 
+    border-width: var(--color-dark--);
+    background-image: url("./Images/pyramid-background-noRed.png");
+    background-size:cover;
+    height:800px;
+}
+
+section#info{
+    display: flex;
+    justify-content: space-around;
+}
+.skills-container{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
+    justify-content: center;
+    color:black;
+    border-radius: 100%;
+    display:flex;
+    align-self:center;
+    
+}
+
+.skills-container>p{
+    align-self: center;
+}
+
+/*------------------------------------------------------------*/
+/*Animating WELCOME that is inside of LOGO*/
+/*------------------------------------------------------------*/
+div#c{
+    animation-name:c-o;
+    animation-duration: 350ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+div#w{
+    animation-name:c-o;
+    animation-duration:200ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+}
+div#l{
+    animation-name:c-o;
+    animation-duration:300ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+div#e1{
+    animation-name:c-o;
+    animation-duration:250ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+div#e2{
+    animation-name:c-o;
+    animation-duration:650ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+div#m{
+    animation-name:o-m;
+    animation-duration:550ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+div#o{
+    animation-name:o-m;
+    animation-duration:450ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+div#contiue-button{
+    width:25px;
+}
+@keyframes c-o {   
+    0%{ font-size:75px; color:rgb(179, 179, 179);}
+    95% {font-size:75px; color:rgb(179, 179, 179); transform: translate(20px,0px);}
+    100%{ font-size:75px; color:rgb(179, 179, 179); font-style: italic; font-weight: bold;}  
+}
+
+@keyframes o-m{
+    0%{color:black;font-size:75px;}
+    95% {font-size:75px; color:rgb(179, 179, 179); font-style: italic; transform: translate(20px,0px);}
+    100%{color:rgb(160, 3, 3);font-size:75px; font-style: italic; font-weight: bold;}
+}
+
+@media all and (max-width: 945px) {
+    .image{
+        width: 100%;
+    }
+    
+}
